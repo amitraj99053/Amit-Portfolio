@@ -6,8 +6,8 @@ const Projects = () => {
   const [projects, setProjects] = useState([
     {
       _id: '1',
-      title: 'EduConnect Platform',
-      description: 'A comprehensive MERN stack platform connecting students and mentors dynamically. Includes secure authentication, live chat, and payment gateway integration.',
+      title: 'Travel Assist Portal',
+      description: 'A comprehensive MERN stack platform designed to seamlessly assist users with seamless travel planning, itinerary management, and dynamic destination exploration.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
       githubLink: '#',
       liveLink: '#'
@@ -35,6 +35,14 @@ const Projects = () => {
       technologies: ['Java', 'Algorithms', 'DSA'],
       githubLink: 'https://github.com/amitraj99053/DSA-with-java',
       liveLink: '#'
+    },
+    {
+      _id: '5',
+      title: 'Habit Tracker',
+      description: 'A sophisticated daily habit tracking application allowing users to build, monitor, and visualize consistent routines across interactive metric dashboards.',
+      technologies: ['React', 'Tailwind', 'JavaScript'],
+      githubLink: 'https://github.com/amitraj99053/Habit-Tracker-Frontend',
+      liveLink: 'https://habit-tracker-frontend-sage.vercel.app/'
     }
   ]);
 
@@ -58,7 +66,7 @@ const Projects = () => {
           className="mb-20 text-center flex flex-col items-center"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
-            <span className="text-[#0055ff]">03. </span> 
+            <span className="text-[#0055ff]">05. </span> 
             <span className="text-white">PROJECTS</span>
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-[#00f0ff] to-[#0055ff] mx-auto rounded-full shadow-[0_0_15px_#00f0ff]"></div>

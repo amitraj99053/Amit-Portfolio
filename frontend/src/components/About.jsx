@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   const skills = [
-    { name: 'Core Concepts: OOP, DBMS, OS, CN', level: 90 },
+    { name: 'Core Concepts: OOP, DBMS, OS, CN', level: 70 },
     { name: 'Full Stack Development (MERN)', level: 85 },
     { name: 'Languages: Java, JavaScript', level: 80 },
-    { name: 'Tools: VS Code, Git', level: 95 }
+    { name: 'Tools: VS Code, Git', level: 80 }
   ];
 
   return (
