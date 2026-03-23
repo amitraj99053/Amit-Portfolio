@@ -16,6 +16,18 @@ const Hero = () => {
           className="max-w-4xl mx-auto text-center flex flex-col items-center"
         >
           <motion.div 
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="mb-8"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/30 bg-green-500/5 text-green-400 text-xs font-mono font-bold tracking-widest uppercase shadow-[0_0_15px_rgba(34,197,94,0.1)]">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              Available For New Opportunities
+            </span>
+          </motion.div>
+
+          <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}

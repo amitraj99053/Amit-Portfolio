@@ -85,17 +85,17 @@ const Contact = () => {
                   <p className="text-xs text-gray-500 uppercase tracking-widest font-mono mb-1">Profiles</p>
                   <div className="flex gap-4">
                     <a href="https://github.com/amitraj99053" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00f0ff] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#00f0ff]/30"><Github size={20} /></a>
-                    <a href="https://www.linkedin.com/in/amitraj99053/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00f0ff] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#00f0ff]/30"><Linkedin size={20} /></a>
-                    <a href="https://leetcode.com/u/amitraj99053/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFA116] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#FFA116]/30"><LeetCodeIcon className="w-5 h-5" /></a>
+                    <a href="https://www.linkedin.com/in/amit-kumar-654895220/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00f0ff] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#00f0ff]/30"><Linkedin size={20} /></a>
+                    <a href="https://leetcode.com/u/Amit_Kr_01/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFA116] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#FFA116]/30"><LeetCodeIcon className="w-5 h-5" /></a>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="mt-12 space-y-6">
-              <a 
-                href="/Amit_Kumar_Resume.pdf" 
-                download 
+              <a
+                href="/Amit_Kumar_Resume.pdf"
+                download
                 className="flex items-center justify-center gap-3 w-full py-4 px-6 bg-[#0055ff] hover:bg-[#0044dd] text-white rounded-2xl font-bold tracking-wide transition-all shadow-[0_10px_20px_rgba(0,85,255,0.2)] hover:shadow-[0_15px_30px_rgba(0,85,255,0.3)] group"
               >
                 <FileText size={20} className="group-hover:scale-110 transition-transform" />

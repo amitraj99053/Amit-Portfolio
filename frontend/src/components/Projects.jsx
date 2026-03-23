@@ -47,7 +47,11 @@ const Projects = () => {
   ]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/portfolio/projects')
+    const apiUrl = window.location.hostname === 'localhost' 
+      ? 'http://localhost:5000/api/portfolio/projects' 
+      : '/api/portfolio/projects';
+
+    fetch(apiUrl)
       .then(res => res.json())
       .then(data => {
         if (data && data.length > 0) setProjects(data);
