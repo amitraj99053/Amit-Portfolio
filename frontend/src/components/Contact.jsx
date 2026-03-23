@@ -42,8 +42,8 @@ const Contact = () => {
           className="mb-20 flex flex-col items-center text-center"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
-            <span className="text-[#0055ff]">03. </span>
-            <span className="text-white">LET'S CONNECT</span>
+            <span className="text-[#0055ff]">04. </span> 
+            <span className="text-white">GET IN TOUCH</span>
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-[#00f0ff] to-[#0055ff] rounded-full shadow-[0_0_15px_#00f0ff]"></div>
         </motion.div>

@@ -14,10 +14,26 @@ const Projects = () => {
     },
     {
       _id: '2',
-      title: 'Smart E-Commerce',
-      description: 'An advanced e-commerce application with dynamic cart, Redux state management, custom admin dashboard, and robust REST API.',
-      technologies: ['Vite React', 'Tailwind CSS', 'Mongoose', 'Redux'],
-      githubLink: '#',
+      title: 'Campus Placement Management',
+      description: 'Frontend interface for managing campus placements, seamlessly bridging the gap between students, colleges, and recruiters.',
+      technologies: ['JavaScript', 'React', 'Tailwind'],
+      githubLink: 'https://github.com/amitraj99053/Campus-Placement-Management-System-Front-end',
+      liveLink: 'https://campus-placement-management-system-swart.vercel.app'
+    },
+    {
+      _id: '3',
+      title: 'E-Commerce Platform',
+      description: 'An advanced e-commerce application with dynamic cart management, rich user interfaces, and robust deployment structure.',
+      technologies: ['JavaScript', 'MERN'],
+      githubLink: 'https://github.com/amitraj99053/E-Commerce-Platform',
+      liveLink: '#'
+    },
+    {
+      _id: '4',
+      title: 'DSA with Java',
+      description: 'A comprehensive collection of crucial Data Structures and Algorithms implemented meticulously in Java for optimized performance.',
+      technologies: ['Java', 'Algorithms', 'DSA'],
+      githubLink: 'https://github.com/amitraj99053/DSA-with-java',
       liveLink: '#'
     }
   ]);
@@ -42,8 +58,8 @@ const Projects = () => {
           className="mb-20 text-center flex flex-col items-center"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
-            <span className="text-[#0055ff]">02. </span> 
-            <span className="text-white">FEATURED PROJECTS</span>
+            <span className="text-[#0055ff]">03. </span> 
+            <span className="text-white">PROJECTS</span>
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-[#00f0ff] to-[#0055ff] mx-auto rounded-full shadow-[0_0_15px_#00f0ff]"></div>
         </motion.div>
