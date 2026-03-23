@@ -7,8 +7,8 @@ const connectDB = require('./config/db');
 
 const app = express();
 
-// Connect to database
-connectDB();
+// Connect to database (Disabled for DB-Free Deployment)
+// connectDB();
 
 // Middleware
 app.use(cors());
