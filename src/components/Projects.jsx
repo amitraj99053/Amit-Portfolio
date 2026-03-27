@@ -10,8 +10,8 @@ const Projects = () => {
       title: 'Travel Assist Portal',
       description: 'A comprehensive MERN stack platform designed to seamlessly assist users with travel planning, itinerary management, and dynamic destination exploration.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-      githubLink: 'https://github.com/amitraj99053',
-      liveLink: '#'
+      githubLink: 'https://github.com/amitraj99053/travel-assist-frontend',
+      liveLink: 'https://travel-assist-portal.vercel.app/'
     },
     {
       _id: '2',
