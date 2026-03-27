@@ -7,15 +7,15 @@ const Projects = () => {
     {
       _id: '1',
       title: 'Travel Assist Portal',
-      description: 'A comprehensive MERN stack platform designed to seamlessly assist users with seamless travel planning, itinerary management, and dynamic destination exploration.',
+      description: 'A comprehensive MERN stack platform designed to seamlessly assist users with travel planning, itinerary management, and dynamic destination exploration.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-      githubLink: '#',
+      githubLink: 'https://github.com/amitraj99053',
       liveLink: '#'
     },
     {
       _id: '2',
-      title: 'Campus Placement Management',
-      description: 'Frontend interface for managing campus placements, seamlessly bridging the gap between students, colleges, and recruiters.',
+      title: 'Campus Placement System',
+      description: 'A complete frontend interface for managing campus placements, seamlessly bridging the gap between students, colleges, and recruiters.',
       technologies: ['JavaScript', 'React', 'Tailwind'],
       githubLink: 'https://github.com/amitraj99053/Campus-Placement-Management-System-Front-end',
       liveLink: 'https://campus-placement-management-system-swart.vercel.app'
@@ -23,23 +23,23 @@ const Projects = () => {
     {
       _id: '3',
       title: 'E-Commerce Platform',
-      description: 'An advanced e-commerce application with dynamic cart management, rich user interfaces, and robust deployment structure.',
-      technologies: ['JavaScript', 'MERN'],
+      description: 'An advanced e-commerce application with dynamic cart management, rich user interfaces, and robust deployment logic.',
+      technologies: ['React', 'Node.js', 'Express', 'MERN'],
       githubLink: 'https://github.com/amitraj99053/E-Commerce-Platform',
-      liveLink: '#'
+      liveLink: 'https://github.com/amitraj99053/E-Commerce-Platform'
     },
     {
       _id: '4',
-      title: 'DSA with Java',
+      title: 'DSA and Problem Solving',
       description: 'A comprehensive collection of crucial Data Structures and Algorithms implemented meticulously in Java for optimized performance.',
       technologies: ['Java', 'Algorithms', 'DSA'],
       githubLink: 'https://github.com/amitraj99053/DSA-with-java',
-      liveLink: '#'
+      liveLink: 'https://github.com/amitraj99053/DSA-with-java'
     },
     {
       _id: '5',
-      title: 'Habit Tracker',
-      description: 'A sophisticated daily habit tracking application allowing users to build, monitor, and visualize consistent routines across interactive metric dashboards.',
+      title: 'Habit Tracker App',
+      description: 'A sophisticated daily habit tracking application allowing users to build, monitor, and visualize consistent routines across interactive dashboards.',
       technologies: ['React', 'Tailwind', 'JavaScript'],
       githubLink: 'https://github.com/amitraj99053/Habit-Tracker-Frontend',
       liveLink: 'https://habit-tracker-frontend-sage.vercel.app/'

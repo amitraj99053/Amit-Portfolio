@@ -9,16 +9,16 @@ const Experience = () => {
       company: "Elevate Lab Pvt. Ltd.",
       duration: "May 2025 - June 2025",
       location: "Remote",
-      description: "Contributed to the development of a real-time collaboration tool using the MERN stack. Optimized database queries and improved frontend load times by 40% using React best practices.",
-      skills: ["React", "Node.js", "MongoDB", "Express", "Git", "HTML/CSS", "Tailwind CSS", "JavaScript"]
+      description: "Spearheaded the development of a real-time collaboration tool using the MERN stack. Optimized complex MongoDB queries and utilized React best practices to improve frontend load performance by over 40%.",
+      skills: ["React", "Node.js", "MongoDB", "Express", "Socket.io", "Git", "Tailwind CSS"]
     },
     {
       role: "Freelance Full Stack Developer",
       company: "Self-Employed",
       duration: "2024 - Present",
       location: "India",
-      description: "Designing and developing tailored web solutions for various clients. Focusing on creating responsive, performant, and SEO-optimized portfolio and business websites.",
-      skills: ["JavaScript", "Tailwind CSS", "HTML/CSS", "Git"]
+      description: "Architecting and deploying tailored web solutions for diverse clients globally. Specializing in high-performance, SEO-optimized portfolio and business websites with a strong emphasis on user experience and modern design tokens.",
+      skills: ["Next.js", "JavaScript", "Tailwind CSS", "Framer Motion", "Git"]
     }
   ];
 
