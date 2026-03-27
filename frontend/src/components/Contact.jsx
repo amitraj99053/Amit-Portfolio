@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, Linkedin, Github, Globe, FileText, Download } from 'lucide-react';
+import API_BASE_URL from '../apiConfig';
 
 const LeetCodeIcon = (props) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -18,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch(`${API_BASE_URL}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

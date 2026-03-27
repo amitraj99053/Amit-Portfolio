@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import API_BASE_URL from '../apiConfig';
 
 const Projects = () => {
   const [projects, setProjects] = useState([
@@ -47,9 +48,7 @@ const Projects = () => {
   ]);
 
   useEffect(() => {
-    const apiUrl = window.location.hostname === 'localhost' 
-      ? 'http://localhost:5000/api/portfolio/projects' 
-      : '/api/portfolio/projects';
+    const apiUrl = `${API_BASE_URL}/portfolio/projects`;
 
     fetch(apiUrl)
       .then(res => res.json())
