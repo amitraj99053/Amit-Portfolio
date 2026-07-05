@@ -91,8 +91,8 @@ const Projects = () => {
                   0{idx + 1}
                 </div>
                 <div className="flex gap-4">
-                  <a href={project.githubLink} className="text-gray-400 hover:text-white transition-colors hover:scale-110" title="GitHub Repo"><Github size={24} /></a>
-                  <a href={project.liveLink} className="text-gray-400 hover:text-[#00f0ff] transition-colors hover:scale-110" title="Live Preview"><ExternalLink size={24} /></a>
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors hover:scale-110" title="GitHub Repo"><Github size={24} /></a>
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#00f0ff] transition-colors hover:scale-110" title="Live Preview"><ExternalLink size={24} /></a>
                 </div>
               </div>
               
