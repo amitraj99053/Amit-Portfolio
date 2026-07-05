@@ -5,6 +5,7 @@ Welcome to the repository of my personal developer portfolio website. This is a 
 ## 🚀 Live Preview
 The frontend of the portfolio is configured and ready for automated deployment on **Vercel** and connects to a backend API service running on **Render**.
 
+* **Live Portfolio URL:** [https://amit-portfolio-lac.vercel.app/](https://amit-portfolio-lac.vercel.app/)
 * **Local Preview Server:** [http://localhost:5173/](http://localhost:5173/)
 
 ---
