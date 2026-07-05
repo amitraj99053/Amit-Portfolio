@@ -28,7 +28,7 @@ const Institute = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#0b1221]/80 backdrop-blur-xl border border-[#00f0ff]/20 p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden group"
+            className="bg-[#0b1221]/80 backdrop-blur-xl border border-[#00f0ff]/20 p-6 sm:p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-40 h-40 bg-[#00f0ff]/5 rounded-full blur-3xl -z-10 group-hover:bg-[#00f0ff]/10 transition-colors"></div>
             
@@ -47,7 +47,7 @@ const Institute = () => {
 
             <div className="space-y-6 mb-10">
               <p className="text-gray-400 leading-relaxed">
-                Currently pursuing a <span className="text-white font-semibold">Master of Computer Applications (MCA)</span> with a focus on advanced computing, software engineering, and emerging technologies. GL Bajaj is recognized for its excellence in engineering and management education.
+                Completed a <span className="text-white font-semibold">Master of Computer Applications (MCA)</span> with a focus on advanced computing, software engineering, and emerging technologies. GL Bajaj is recognized for its excellence in engineering and management education.
               </p>
               
               <div className="grid grid-cols-2 gap-6">
@@ -57,7 +57,7 @@ const Institute = () => {
                 </div>
                 <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
                   <div className="text-[#00f0ff] font-mono text-xl font-bold mb-1">Status</div>
-                  <div className="text-white text-sm">Active (Final Year)</div>
+                  <div className="text-white text-sm">Complete</div>
                 </div>
               </div>
             </div>

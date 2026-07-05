@@ -7,7 +7,7 @@ const Education = () => {
       degree: "Master of Computer Applications",
       institute: "GL Bajaj Institute of Technology and Management",
       duration: "2024 - 2026",
-      description: "A final-year Master of Computer Applications (MCA) student with a strong foundation in software development, programming, and problem-solving. Skilled in technologies like Java, Python, Web Development (HTML, CSS, JavaScript, MERN stack), and database management systems.",
+      description: "Successfully completed a Master of Computer Applications (MCA) with a strong foundation in software development, programming, and problem-solving. Skilled in technologies like ReactJS, NodeJS, SQL, Java, Python, Web Development (MERN stack), and database management systems.",
       gpa: "7.5 CGPA"
     },
     {
@@ -51,7 +51,7 @@ const Education = () => {
               {/* Timeline dot */}
               <div className="absolute -left-[41px] md:-left-[57px] top-1 w-5 h-5 bg-[#0b0f19] border-4 border-[#00f0ff] rounded-full shadow-[0_0_10px_#00f0ff]"></div>
 
-              <div className="bg-[#040914]/80 p-8 md:p-10 rounded-2xl border border-[#0055ff]/20 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.4)] hover:border-[#00f0ff]/40 transition-all duration-300 group">
+              <div className="bg-[#040914]/80 p-6 sm:p-8 md:p-10 rounded-2xl border border-[#0055ff]/20 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.4)] hover:border-[#00f0ff]/40 transition-all duration-300 group">
                 <div className="flex flex-col md:flex-row justify-between md:items-center mb-4 gap-4">
                   <div>
                     <h3 className="text-2xl font-bold text-white group-hover:text-[#00f0ff] transition-colors">{edu.degree}</h3>

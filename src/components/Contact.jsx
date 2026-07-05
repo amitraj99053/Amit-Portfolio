@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Linkedin, Github, Globe, FileText, Download } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin, Github, Globe, FileText, Download, Instagram } from 'lucide-react';
 import API_BASE_URL from '../apiConfig';
 
 const LeetCodeIcon = (props) => (
@@ -11,28 +11,72 @@ const LeetCodeIcon = (props) => (
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [honeypot, setHoneypot] = useState('');
+  const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // 1. Honeypot check for bots
+    if (honeypot) {
+      console.warn("Spam bot detected!");
+      setStatus('Message sent successfully! I will get back to you soon.'); // Fake success
+      return;
+    }
+
+    // 2. Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email.trim())) {
+      setStatus('Please enter a valid email address.');
+      return;
+    }
+
+    // 3. Basic input sanitization (XSS mitigation)
+    const sanitizeInput = (str) => {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#x27;")
+        .replace(/\//g, "&#x2F;");
+    };
+
+    const sanitizedData = {
+      name: sanitizeInput(formData.name.trim()),
+      email: formData.email.trim(),
+      subject: sanitizeInput(formData.subject.trim()),
+      message: sanitizeInput(formData.message.trim())
+    };
+
+    setIsSending(true);
     setStatus('Sending...');
+
     try {
       const res = await fetch(`${API_BASE_URL}/contact`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(sanitizedData)
       });
+      
       if (res.ok) {
         setStatus('Message sent successfully! I will get back to you soon.');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        setStatus('Failed to send message.');
+        const errorData = await res.json().catch(() => ({}));
+        setStatus(errorData.message || 'Failed to send message. Backend server returned an error.');
       }
     } catch (error) {
-      console.error(error);
-      setStatus('Failed to send message. Please try again later.');
+      console.error('Contact submission error:', error);
+      setStatus('Failed to send message. Please ensure the backend is online and permits CORS requests.');
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -57,7 +101,7 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row gap-0 bg-[#0b1221]/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-[#00f0ff]/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 
           {/* Contact Info Sidebar */}
-          <div className="md:w-5/12 bg-[#0055ff]/5 p-12 flex flex-col justify-center relative overflow-hidden border-r border-[#00f0ff]/10">
+          <div className="w-full md:w-5/12 bg-[#0055ff]/5 p-6 sm:p-12 flex flex-col justify-center relative overflow-hidden border-b md:border-b-0 md:border-r border-[#00f0ff]/10">
             <div className="bg-[#00f0ff]/10 w-48 h-48 absolute -top-10 -right-10 rounded-full -z-10 blur-3xl"></div>
 
             <h3 className="text-3xl font-black text-white mb-10 tracking-wide">Contact Info</h3>
@@ -67,7 +111,7 @@ const Contact = () => {
                 <div className="p-4 bg-white/5 border border-white/5 rounded-2xl text-[#00f0ff] group-hover:bg-[#00f0ff]/10 group-hover:border-[#00f0ff]/30 transition-all shadow-[0_0_10px_rgba(0,240,255,0)] group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)]"><Mail size={24} /></div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest font-mono mb-1">Mail Me</p>
-                  <a href="mailto:" className="text-white font-semibold hover:text-[#00f0ff] transition-colors text-lg">amitraj99053@gmail.com</a>
+                  <a href="mailto:amitraj99053@gmail.com" className="text-white font-semibold hover:text-[#00f0ff] transition-colors text-lg break-all">amitraj99053@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-center gap-6 group">
@@ -87,6 +131,7 @@ const Contact = () => {
                     <a href="https://github.com/amitraj99053" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00f0ff] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#00f0ff]/30"><Github size={20} /></a>
                     <a href="https://www.linkedin.com/in/amit-kumar-654895220/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00f0ff] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#00f0ff]/30"><Linkedin size={20} /></a>
                     <a href="https://leetcode.com/u/Amit_Kr_01/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFA116] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#FFA116]/30"><LeetCodeIcon className="w-5 h-5" /></a>
+                    <a href="https://www.instagram.com/__amit__kr_01/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#E1306C] transition-all p-2 bg-white/5 rounded-lg border border-white/5 hover:border-[#E1306C]/30" title="Instagram"><Instagram size={20} /></a>
                   </div>
                 </div>
               </div>
@@ -112,11 +157,23 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="md:w-7/12 p-12 md:p-16">
+          <div className="w-full md:w-7/12 p-6 sm:p-12 md:p-16">
             <h3 className="text-3xl font-black text-white mb-3">Send me a message.</h3>
             <p className="text-gray-400 mb-10 text-lg">Have a question or a project in mind? Shoot me a message!</p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot field for bot protection */}
+              <div className="hidden" aria-hidden="true">
+                <input 
+                  type="text" 
+                  name="website" 
+                  value={honeypot} 
+                  onChange={(e) => setHoneypot(e.target.value)} 
+                  tabIndex="-1" 
+                  autoComplete="off" 
+                />
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" required className="w-full bg-[#040914]/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#00f0ff]/50 focus:bg-[#040914] focus:shadow-[0_0_15px_rgba(0,240,255,0.1)] transition-all" />
@@ -131,8 +188,8 @@ const Contact = () => {
               <div>
                 <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message..." required rows="4" className="w-full bg-[#040914]/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#00f0ff]/50 focus:bg-[#040914] focus:shadow-[0_0_15px_rgba(0,240,255,0.1)] transition-all resize-none"></textarea>
               </div>
-              <button type="submit" className="button-neon w-full flex justify-center items-center gap-3 text-lg py-4 mt-2">
-                Send Message <Send size={20} />
+              <button type="submit" disabled={isSending} className="button-neon w-full flex justify-center items-center gap-3 text-lg py-4 mt-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                {isSending ? 'Sending...' : 'Send Message'} <Send size={20} />
               </button>
 
               {status && <p className="text-center mt-6 text-sm font-mono text-[#00f0ff] font-bold tracking-widest">{status}</p>}

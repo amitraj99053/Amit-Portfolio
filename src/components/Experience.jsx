@@ -5,7 +5,15 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      role: "Web Development Intern",
+      role: "Web Developer",
+      company: "DigiLuma Marketing Solutions",
+      duration: "Jan 2026 - Present",
+      location: "Delhi, India · Hybrid",
+      description: "Developing responsive web applications and landing pages, optimizing user experiences, and collaborating with cross-functional teams to implement web solutions for digital marketing campaigns.",
+      skills: ["React", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Git", "Responsive Design"]
+    },
+    {
+      role: "Web Developer Intern",
       company: "Elevate Lab Pvt. Ltd.",
       duration: "May 2025 - June 2025",
       location: "Remote",
@@ -49,7 +57,7 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#040914]/80 p-8 md:p-10 rounded-3xl border border-[#0055ff]/20 backdrop-blur-md shadow-[0_15px_40px_rgba(0,0,0,0.5)] hover:border-[#00f0ff]/50 transition-all duration-500 group relative overflow-hidden"
+              className="bg-[#040914]/80 p-6 sm:p-8 md:p-10 rounded-3xl border border-[#0055ff]/20 backdrop-blur-md shadow-[0_15px_40px_rgba(0,0,0,0.5)] hover:border-[#00f0ff]/50 transition-all duration-500 group relative overflow-hidden"
             >
               {/* Top Accent Bar */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00f0ff]/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>

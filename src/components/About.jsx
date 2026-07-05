@@ -49,7 +49,7 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#040914]/80 p-10 rounded-3xl border border-[#00f0ff]/20 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative overflow-hidden"
+            className="bg-[#040914]/80 p-6 sm:p-10 rounded-3xl border border-[#00f0ff]/20 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#00f0ff]/10 rounded-full blur-[60px] pointer-events-none"></div>
             

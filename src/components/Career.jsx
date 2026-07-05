@@ -14,9 +14,9 @@ const Career = () => {
       description: "Beyond building software, my focus extends into Data Analysis. My aspiration is to extract, visualize, and transform complex raw data into actionable insights, driving crucial data-driven decisions that propel businesses forward."
     },
     {
-      title: "Cloud & System Design",
-      icon: "☁️",
-      description: "I am deeply passionate about learning distributed systems, cloud infrastructure (AWS/GCP), and microservices architecture. My ultimate aspiration is to architect systems that effortlessly handle massive traffic with zero downtime."
+      title: "Quality Assurance (QA)",
+      icon: "🛡️",
+      description: "I aim to specialize in Software Quality Assurance, mastering manual testing, automation frameworks, and bug detection to ensure web applications deliver exceptional reliability, performance, and user experiences."
     }
   ];
 
@@ -44,7 +44,7 @@ const Career = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-[#040914]/80 p-10 rounded-3xl border border-[#00f0ff]/20 backdrop-blur-md hover:-translate-y-3 hover:shadow-[0_15px_30px_rgba(0,240,255,0.15)] hover:border-[#00f0ff]/50 transition-all duration-500 relative overflow-hidden group"
+              className="bg-[#040914]/80 p-6 sm:p-10 rounded-3xl border border-[#00f0ff]/20 backdrop-blur-md hover:-translate-y-3 hover:shadow-[0_15px_30px_rgba(0,240,255,0.15)] hover:border-[#00f0ff]/50 transition-all duration-500 relative overflow-hidden group"
             >
               {/* Decorative top gradient */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00f0ff] to-[#0055ff] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
