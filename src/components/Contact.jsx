@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Linkedin, Github, Globe, FileText, Download, Instagram } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin, Github, Globe, Instagram } from 'lucide-react';
 import API_BASE_URL from '../apiConfig';
 
 const LeetCodeIcon = (props) => (
@@ -146,16 +146,6 @@ const Contact = () => {
             </div>
 
             <div className="mt-12 space-y-6">
-              <a
-                href="/Amit_Kumar_Resume.pdf"
-                download
-                className="flex items-center justify-center gap-3 w-full py-4 px-6 bg-[#0055ff] hover:bg-[#0044dd] text-white rounded-2xl font-bold tracking-wide transition-all shadow-[0_10px_20px_rgba(0,85,255,0.2)] hover:shadow-[0_15px_30px_rgba(0,85,255,0.3)] group"
-              >
-                <FileText size={20} className="group-hover:scale-110 transition-transform" />
-                Download Resume
-                <Download size={18} className="opacity-50 group-hover:translate-y-0.5 transition-transform" />
-              </a>
-
               <div className="flex items-center justify-center">
                 <span className="inline-block py-2 px-4 rounded-full border border-green-500/50 bg-green-500/10 text-green-400 text-xs font-mono font-bold tracking-widest uppercase shadow-[0_0_10px_rgba(34,197,94,0.2)]">
                   ● Open For Opportunities
