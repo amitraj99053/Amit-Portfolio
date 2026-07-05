@@ -69,8 +69,16 @@ const Contact = () => {
         setStatus('Message sent successfully! I will get back to you soon.');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        const errorData = await res.json().catch(() => ({}));
-        setStatus(errorData.message || 'Failed to send message. Backend server returned an error.');
+        const contentType = res.headers.get("content-type");
+        let errorMessage = '';
+        if (contentType && contentType.includes("application/json")) {
+          const errorData = await res.json().catch(() => ({}));
+          errorMessage = errorData.message || errorData.error;
+        } else {
+          const errorText = await res.text().catch(() => '');
+          errorMessage = errorText ? errorText.substring(0, 100) : '';
+        }
+        setStatus(errorMessage ? `Server Error: ${errorMessage}` : `Failed to send message. Server returned status code ${res.status}.`);
       }
     } catch (error) {
       console.error('Contact submission error:', error);
