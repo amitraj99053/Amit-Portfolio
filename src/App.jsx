@@ -47,15 +47,9 @@ function App() {
       </main>
 
       <footer className="py-12 bg-[#040914] border-t border-[#00f0ff]/10 text-center relative z-10">
-        <div className="container mx-auto px-6 max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div className="container mx-auto px-6 max-w-6xl flex justify-center items-center">
           <div className="text-gray-500 text-sm font-mono">
             &copy; {new Date().getFullYear()} <span className="text-[#00f0ff] font-sans font-bold">Amit Kumar</span>. All Rights Reserved.
-          </div>
-          <div className="text-gray-500 text-sm font-mono flex items-center gap-2">
-            <span>Built with passion using</span>
-            <span className="text-red-500 animate-pulse">❤️</span>
-            <span>&amp;</span>
-            <span className="text-white font-bold bg-[#0055ff]/15 px-3.5 py-1 rounded-full border border-[#0055ff]/35 text-xs uppercase tracking-wider">MERN Stack</span>
           </div>
         </div>
       </footer>
