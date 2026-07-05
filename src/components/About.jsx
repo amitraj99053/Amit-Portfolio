@@ -6,7 +6,8 @@ const About = () => {
     { name: 'Core: OOP, DBMS, OS, Data Structures', level: 85 },
     { name: 'Full Stack: MERN, REST APIs, JWT', level: 90 },
     { name: 'Languages: Java, JavaScript, Python, SQL', level: 85 },
-    { name: 'Tools: Git, VS Code, Postman, Vercel', level: 80 }
+    { name: 'Tools: Git, VS Code, Postman, Vercel', level: 80 },
+    { name: 'AI & Productivity: Antigravity, Cursor, ChatGPT, Prompting', level: 90 }
   ];
 
   return (
